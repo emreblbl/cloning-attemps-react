@@ -3,7 +3,11 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #fff;
+    background-color: transparent; /* Transparent yaparak resmin üzerine gelmesini sağladık */
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1; /* Header'ın resmin üzerinde kalmasını sağladık */
 }
 
 .header .logo {
@@ -30,6 +34,7 @@
 .icon-group {
     display: flex;
     list-style: none;
+    list-style-type: none;
     padding: 0;
     margin: 0;
     gap: 20px; /* Adjust spacing between icons */
@@ -56,4 +61,26 @@
 .icon {
     width: 24px; /* Adjust SVG size */
     height: 24px;
+}
+
+.tds-site-nav-items {
+    list-style: none; /* Remove default list styling */
+    display: flex; /* Align items in a row */
+    justify-content: center; /* Center the items horizontally */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+.tds-site-nav-items li {
+    margin: 0 20px; /* Add horizontal spacing between items */
+}
+
+.tds-site-nav-items a {
+    text-decoration: none; /* Remove underline from links */
+    color: #000; /* Set link color */
+    font-weight: bold; /* Optional: make text bold */
+}
+
+.tds-site-nav-items a:hover {
+    color: #555; /* Optional: change color on hover */
 }
